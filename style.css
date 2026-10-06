@@ -12,25 +12,23 @@ body {
     width: 100vw;
     margin: 0;
     overflow: hidden;
-
-    background: #f7f3ff;
+    background: #0f172a;
 }
 
 .btn {
-    background-color: #7c3aed;
+    background-color: #06b6d4;
     border: none;
     border-radius: 10px;
     font-size: 20px;
     padding: 10px 30px;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
-
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.25);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.25);
     transition: all 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #6d28d9;
+    background-color: #0891b2;
     transform: translateY(-2px);
 }
 
@@ -39,8 +37,8 @@ body {
 }
 
 .btn:disabled {
-    background-color: #d6d3e0;
-    color: #8b8797;
+    background-color: #334155;
+    color: #64748b;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
@@ -67,7 +65,7 @@ body {
     content: '';
     height: 5px;
     width: 100%;
-    background-color: #ddd6fe;
+    background-color: #334155;
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -81,29 +79,46 @@ body {
     width: 0;
     background: linear-gradient(
         90deg,
-        #7c3aed,
-        #ec4899
+        #06b6d4,
+        #3b82f6
     );
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
-
     border-radius: 10px;
     transition: width 0.4s ease;
 }
 
 .circle {
-    background-color: #ffffff;
-    color: #8b5cf6;
+    background-color: #1e293b;
+    color: #22d3ee;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 4px solid #ddd6fe;
-
+    border: 4px solid #475569;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.circle.active {
+    background-color: #06b6d4;
+    color: #ffffff;
+    border-color: #67e8f9;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.45);
+}
+
+.circle.completed {
+    background-color: #0ea5e9;
+    color: #ffffff;
+    border-color: #38bdf8;
+}
+
+.circle:hover {
+    transform: scale(1.08);
+}
 
